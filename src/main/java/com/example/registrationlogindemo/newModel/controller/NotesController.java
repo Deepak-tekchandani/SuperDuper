@@ -16,7 +16,7 @@ public class NotesController {
     @Autowired
     private NotesRepo notesRepo;
 
-    @RequestMapping("/notes")
+    @GetMapping("/notes")
     public String list(Model model) {
         model.addAttribute("listNotes", notesRepo.findAll());
 //        return clientService.listsAll();
